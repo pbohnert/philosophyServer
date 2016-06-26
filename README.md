@@ -1,4 +1,4 @@
-# philosophyServer for "Getting to Philosophy"
+# philosophyServer
 =================
 
 This Node.js app supplies a RESTful API and server processing to satisfy the requirements of the 'Getting to Philosophy' exercise.
