@@ -9,7 +9,9 @@ const utility = new Utility();
 Only entry point. Change path passed to client to change endpoint
 */
 app.get('/search', function(req, res) {
-	utility.client('/posts/1')
+	//console.log(req)
+	//utility.client('/posts/1')
+	utility.client(req.query.url)
 		.then(data =>  {
 		return res.send(data);
 	});
