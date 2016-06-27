@@ -23,23 +23,25 @@ export default class Utility {
     findPhilo(path) {
     	var jsonPage;
     	var hopCount = 0;
-    	var hopLimit = 5;
+    	var hopLimit = 10;
     	var completePath = "Path Taken\n\n";
     	var searchTerm = path;
     	var philosophyFound = false;
     	var title = "";
     	var nextTerm = "";
-    	var i = 1;
+    	var i = 0;
 
     	while (hopLimit > 0) {
     		hopCount++;
-    		console.log("looping at hopcount: " + hopCount);
+    		//console.log("looping at hopcount: " + hopCount);
     		jsonPage = client(searchTerm);
     	    //console.log(jsonPage);
     	    // parse JSON to get title, next searchTerm
-    	    // temp code
-    	    nextTerm = "Richard term" + i++;
-    	    title = "Richard Page" + i;
+    	    // temp code below until I write my json parser...this allows me to test my outside loop
+    	    nextTerm = path + i++;
+    	    title = path + i;
+    	    // end of temp code
+
     	    completePath = completePath + "Title: " + title + "\n";
     	    if (title == "Philosophy") {
     	    	philosophyFound = true;

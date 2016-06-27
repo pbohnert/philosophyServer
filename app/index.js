@@ -25,7 +25,9 @@ Our one entry point. Change path passed to client to change endpoint
 */
 app.get('/search', function(req, res) {
 	//utility.client('/posts/1')  // test url
-	return res.send(utility.findPhilo(req.query.url));
+	var data;
+    data = utility.findPhilo(req.query.url);
+	return res.send(data);
 });
 
 app.listen(4000);
